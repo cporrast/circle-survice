@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfemnm3yx85kv"
-path="res://.godot/imported/walk_2.png-8925b2a0b1acb26629683bb46c7459ee.ctex"
+uid="uid://djnyiei7t7v8g"
+path="res://.godot/imported/straight_bullet.png-9f0a344c0c1c71fb273bbca8e23b3945.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/walk_2.png"
-dest_files=["res://.godot/imported/walk_2.png-8925b2a0b1acb26629683bb46c7459ee.ctex"]
+source_file="res://scenes/bullet/StraightBullet/art/straight_bullet.png"
+dest_files=["res://.godot/imported/straight_bullet.png-9f0a344c0c1c71fb273bbca8e23b3945.ctex"]
 
 [params]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://5goaiapipttd"]
+
+[ext_resource type="Script" uid="uid://dmbey00lbmlvj" path="res://scenes/bullet/BouncyBullet/bouncy_bullet.gd" id="1_j4xf1"]
+[ext_resource type="Texture2D" uid="uid://bd2ebf1yxv6u8" path="res://scenes/bullet/BouncyBullet/art/bouncy_bullet.png" id="2_rhgxs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhgxs"]
+radius = 258.627
+
+[node name="BouncyBullet" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_j4xf1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rhgxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rhgxs")

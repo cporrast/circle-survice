@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1nssl1u7t7ni"]
+
+[ext_resource type="Script" uid="uid://cou1nfyf4ocgc" path="res://scenes/bullet/StraightBullet/straight_bullet.gd" id="1_c31ui"]
+[ext_resource type="Texture2D" uid="uid://djnyiei7t7v8g" path="res://scenes/bullet/StraightBullet/art/straight_bullet.png" id="2_0811d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0811d"]
+size = Vector2(180, 125)
+
+[node name="StraightBullet" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_c31ui")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-78, -1)
+texture = ExtResource("2_0811d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(88, 0)
+shape = SubResource("RectangleShape2D_0811d")
