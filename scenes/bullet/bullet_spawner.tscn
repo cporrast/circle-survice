@@ -17,11 +17,10 @@ var wave := 1
 		
 func _process(delta):
 	time_accumulator += delta
-	if time_accumulator >= 3.0:
+	if time_accumulator >= 2.0:
 		spawn_bullets(wave)
 		time_accumulator = 0.0
 		wave += 1
-
 
 func spawn_bullets(count: int):
 	for i in count:
@@ -43,6 +42,9 @@ func spawn_bullets(count: int):
 		bullet.global_position = spawn_pos
 		bullet.set_direction(dir)
 		get_tree().current_scene.add_child(bullet)
+
+		# ✅ Score goes up for every bullet spawned
+		get_tree().current_scene.get_node(\"ScoreManager\").add_bullet()
 
 func get_spawn_position() -> Vector2:
 	var angle = randf() * TAU

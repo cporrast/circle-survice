@@ -51,7 +51,7 @@ func bounce_direction(normal: Vector2) -> Vector2:
 	bounced = bounced.rotated(angle_variation).normalized()
 	return bounced
 	
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		print("Player hit by bullet!")
-		queue_free()
+#func _on_body_entered(body):
+	#if body.is_in_group("player"):
+		#print("Player hit by bullet!")
+		#queue_free()

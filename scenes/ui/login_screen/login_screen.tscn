@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://qsbat1u1bo83"]
+
+[ext_resource type="Script" uid="uid://cl3a4v15372bg" path="res://scenes/ui/login_screen/login_screen.gd" id="1_sro4r"]
+[ext_resource type="Texture2D" uid="uid://dv6cy2okymtto" path="res://scenes/ui/login_screen/art/logo.png" id="2_hc00o"]
+
+[node name="LoginScreen" type="CanvasLayer"]
+script = ExtResource("1_sro4r")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.15173, 1.80889)
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = 270.0
+offset_top = 39.0
+offset_right = 782.0
+offset_bottom = 491.0
+scale = Vector2(1.29663, 1.24633)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_hc00o")
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Welcome to the Arena"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls:
+- Move: WASD
+- Speed Boost: Spacebar (cooldown)
+- Avoid bullets! Yellow = bouncy, Purple = fast.
+- Score = bullets × time survived."
+fit_content = true
+
+[node name="Panel" type="Panel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/Panel"]
+layout_mode = 2
+offset_left = -6.16991
+offset_top = 3.98816
+offset_right = 505.83
+offset_bottom = 34.9882
+text = "Play"
